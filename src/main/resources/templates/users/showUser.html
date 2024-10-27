@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+    <link href="/styles/index.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="table_actions">
+    <div class="table_name">Пользователь</div>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th class="centred" style="min-width: 48px;">id</th>
+        <th >Name</th>
+        <th >Surname</th>
+        <th class="centred">Age</th>
+        <th class="centred" style="min-width: 100px;">Изменить</th>
+        <th class="centred" style="min-width: 100px;">Удалить</th>
+    </tr>
+    </thead>
+    <tr class="bodyRows">
+        <td class="centred" style="min-width: 48px;" th:text="${user.getId()}">1</td>
+        <td th:text="${user.getName()}"></td>
+        <td th:text="${user.getSurname()}"></td>
+        <td class="centred" th:text="${user.getAge()}">12</td>
+        <td class="centred" style="min-width: 100px;" id="edit_button">
+            <a class="action_button change"
+               th:onclick="'window.location.href =\'/users/'+ ${user.getId()} +'/update\';'">Изменить</a></td>
+        <td class="centred" style="min-width: 100px;" id="delete_button">
+            <form th:action="@{/users/{id}(id=${user.getId()})}" th:method="DELETE">
+                <input type="submit" class="action_button delete" value="Удалить"/>
+            </form>
+
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

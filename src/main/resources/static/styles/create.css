@@ -1,0 +1,88 @@
+body{
+    margin: 0px;
+    display: flex;
+    width: 100dvw;
+    height: 100dvh;
+    position: relative;
+    overflow-y: scroll;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.form_card{
+    width: 600px;
+    height: fit-content;
+    outline: 2px solid #3a0fff;
+    border-radius: 16px;
+    display: flex;
+
+
+    box-sizing: border-box;
+    padding: 32px;
+}
+
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.input_container{
+    position: relative;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.error{
+    /*position: absolute;*/
+    /*top: -26px;*/
+    width: fit-content;
+    padding: 4px;
+    background: rgba(255, 0, 0, 0.10);
+    outline: 1px solid #ff1d1d;
+    border-radius: 4px;
+    color: red;
+}
+
+label{
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.input_field{
+    outline: 1px solid black;
+    height: 32px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    transition: 0.1s;
+}
+
+.input_field:focus{
+    outline: 2px solid #6b4cff;
+}
+
+.submit_button{
+    width: 100%;
+    height: 32px;
+    outline: 1px solid #6b4cff;
+    border-radius: 4px;
+    background: rgba(107, 76, 255, 0.10);
+    border: none;
+    cursor: pointer;
+
+    color: #6b4cff;
+    font-size: 24px;
+    font-weight: 600;
+    transition: 0.1s;
+}
+
+.submit_button:hover{
+    outline: 2px solid #6b4cff;
+    background: rgba(107, 76, 255, 0.25);
+}
